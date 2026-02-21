@@ -14,10 +14,25 @@ I’m using this repo to:
 - Document trade-offs and architectural decisions  
 
 ---
+## 🔁 Plan
+
+Based on research made by manus.ai,
+Phase 1 2026 (The Foundational Year)
+Q1 (Jan - Mar) = Networking and Core Concepts
+Q2 (Apr - Jun) = Databases
+Q3 (Jul - Sep) = Caching
+Q4 (Oct - Dec) = Asynchronism & Messaging
+
+Phase 2 2027 (The Application Year)
+Goal: Combine foundational components to solve smaller design problems and begin analyzing large-scale case studies.
+   
+---
 
 ## 🧠 Topics Covered (Roadmap-Aligned)
 
 This repository follows the structure of the roadmap.sh System Design curriculum.
+
+![system-design_page-0001](https://github.com/user-attachments/assets/e93e71f0-5125-496a-8f8f-75aad3a1cb63)
 
 ### 🔹 1. Fundamentals
 
@@ -121,16 +136,11 @@ Each case study includes:
 
 ## 🛠 Repository Structure
 
-    fundamentals/
-    architecture/
-    networking/
+    core-concepts-networking/
     databases/
-    infrastructure/
-    patterns/
-    security/
+    caching/
+    asynchronism-messaging/
     case-studies/
-    diagrams/
-    interview-prep/
 
 ---
 
