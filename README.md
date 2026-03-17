@@ -299,6 +299,7 @@ It is about:
 # ⭐ References
 
 * System Design Interview – Alex Xu
+* [System Design 2.0 - Jordan Has No Life](https://www.youtube.com/watch?v=bwt09KXDH94&list=PLjTveVh7FakLdTmm42TMxbN8PvVn5g4KJ)
 
 ---
 
