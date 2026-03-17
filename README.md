@@ -1,180 +1,305 @@
-# 📚 System Design Study Roadmap
+# 📘 System Design Study Guide (Inspired by Alex Xu)
 
-This repository contains my study notes, summaries, and diagrams while following the **System Design curriculum from roadmap.sh**.
-
----
-
-## 🎯 Purpose
-
-I’m using this repo to:
-
-- Learn system design fundamentals end-to-end  
-- Understand how scalable systems are built  
-- Practice interview-style design problems  
-- Document trade-offs and architectural decisions  
-
----
-## 🔁 Plan
-
-Based on research made by manus.ai,
-Phase 1 2026 (The Foundational Year)
-Q1 (Jan - Mar) = Networking and Core Concepts
-Q2 (Apr - Jun) = Databases
-Q3 (Jul - Sep) = Caching
-Q4 (Oct - Dec) = Asynchronism & Messaging
-
-Phase 2 2027 (The Application Year)
-Goal: Combine foundational components to solve smaller design problems and begin analyzing large-scale case studies.
-   
----
-
-## 🧠 Topics Covered (Roadmap-Aligned)
-
-This repository follows the structure of the roadmap.sh System Design curriculum.
-
-![system-design_page-0001](https://github.com/user-attachments/assets/e93e71f0-5125-496a-8f8f-75aad3a1cb63)
-
-### 🔹 1. Fundamentals
-
-- What is System Design
-- Functional vs Non-Functional Requirements
-- Latency vs Throughput
-- Availability
-- Scalability
-- Reliability
-- CAP Theorem
-- Consistency Models
+This README serves as a **structured roadmap** for studying system design, based on the principles and topics from *System Design Interview* by Alex Xu.
 
 ---
 
-### 🔹 2. Architectural Design
+# 🎯 Goals
 
-- Monolith vs Microservices
-- Distributed Systems Basics
-- Client-Server Architecture
-- Service-Oriented Architecture (SOA)
-- High-Level Design (HLD)
-- Low-Level Design (LLD)
-- API Design (REST, gRPC)
+* Build strong **system design fundamentals**
+* Develop the ability to **design scalable systems**
+* Prepare for **system design interviews**
+* Understand **real-world architectures**
 
 ---
 
-### 🔹 3. Networking & Communication
+# 🧠 Core Mindset
 
-- DNS
-- HTTP / HTTPS
-- TCP / UDP
-- WebSockets
-- Proxies & Reverse Proxies
+Before diving into systems, internalize this:
 
----
-
-### 🔹 4. Data & Storage
-
-- SQL vs NoSQL
-- Indexing
-- Replication
-- Sharding
-- Partitioning
-- Caching Strategies
-- Content Delivery Networks (CDN)
+* There is **no single correct design**
+* Trade-offs are everything
+* Think in **scalability, reliability, and maintainability**
+* Always clarify requirements first
 
 ---
 
-### 🔹 5. Core Infrastructure Components
+# 🪜 Study Roadmap
 
-- Load Balancers
-- Message Queues
-- Event-Driven Architecture
-- API Gateway
-- Rate Limiting
-- Consistent Hashing
+## 1. Basics (Foundation)
 
----
+### Key Concepts
 
-### 🔹 6. Scalability & Reliability Patterns
+* Latency vs Throughput
+* Scalability (Vertical vs Horizontal)
+* Availability vs Consistency
+* CAP Theorem
+* Load vs Traffic patterns
 
-- Horizontal vs Vertical Scaling
-- Auto Scaling
-- Fault Tolerance
-- Circuit Breaker Pattern
-- Bulkhead Pattern
-- Backpressure
-- Observability (Logging, Monitoring, Tracing)
+### Networking Basics
+
+* HTTP / HTTPS
+* TCP vs UDP
+* DNS
+* Load balancing
 
 ---
 
-### 🔹 7. Security
+## 2. Building Blocks
 
-- Authentication
-- Authorization
-- OAuth
-- JWT
-- HTTPS & TLS Basics
+### 🔹 Load Balancer
 
----
+* Distributes traffic across servers
+* Types: L4 vs L7
+* Algorithms: Round Robin, Least Connections
 
-### 🔹 8. Case Studies
+### 🔹 Database
 
-Practical design exercises such as:
+* SQL vs NoSQL
+* Indexing
+* Replication
+* Sharding
 
-- URL Shortener
-- Chat / Messaging System
-- Social Media Feed
-- Video Streaming Service
-- E-commerce Platform
+### 🔹 Cache
 
-Each case study includes:
-- Requirement clarification
-- Capacity estimation
-- High-Level Design
-- Database choices
-- Scaling strategy
-- Trade-off discussion
+* Why caching matters
+* Cache strategies:
 
----
+  * Cache-aside
+  * Write-through
+  * Write-back
 
-## 🛠 Repository Structure
+### 🔹 CDN
 
-    core-concepts-networking/
-    databases/
-    caching/
-    asynchronism-messaging/
-    case-studies/
+* Static content delivery
+* Geo-distribution
 
----
+### 🔹 Message Queue
 
-## 🚀 Learning Workflow
+* Async processing
+* Decoupling services
 
-For each topic:
+### 🔹 Rate Limiter
 
-1. Study the concept  
-2. Summarize in my own words  
-3. Draw architecture diagrams  
-4. Analyze trade-offs  
-5. Apply to a real-world design example  
+* Protect system from overload
+* Algorithms:
+
+  * Token bucket
+  * Leaky bucket
 
 ---
 
-## 📖 Resources
+## 3. High-Level Design Process
 
-- roadmap.sh System Design  
-- Engineering blogs (Netflix, Uber, Amazon, etc.)  
-- System design interview books  
-- Designing Data-Intensive Applications  
-- Real-world architecture case studies  
+### Step 1: Clarify Requirements
+
+* Functional requirements
+* Non-functional requirements
+
+### Step 2: Back-of-the-Envelope Estimation
+
+* Traffic estimation
+* Storage estimation
+
+### Step 3: Define API
+
+* REST endpoints
+* Request/response format
+
+### Step 4: High-Level Design
+
+* Components
+* Data flow
+
+### Step 5: Deep Dive
+
+* Bottlenecks
+* Scaling strategies
+
+### Step 6: Trade-offs
+
+* Cost vs performance
+* Consistency vs availability
 
 ---
 
-## 📈 Goal
+# 🏗️ Common System Design Problems
 
-To develop strong system design intuition and be able to:
+## 1. URL Shortener
 
-- Design scalable systems  
-- Make informed trade-offs  
-- Communicate architecture clearly  
-- Perform confidently in system design interviews  
+Learn:
+
+* Hashing
+* Base62 encoding
+* Database design
+
+## 2. Rate Limiter
+
+Learn:
+
+* Token bucket
+* Distributed counters
+
+## 3. Social Media Feed
+
+Learn:
+
+* Fan-out (push vs pull)
+* Feed ranking
+
+## 4. Chat System
+
+Learn:
+
+* WebSocket
+* Real-time messaging
+* Message storage
+
+## 5. File Storage System
+
+Learn:
+
+* Chunking
+* Upload/download flow
+* Metadata storage
+
+## 6. Notification System
+
+Learn:
+
+* Push vs pull
+* Event-driven systems
 
 ---
 
-> This is a continuous learning journey. Updates will be made as I progress.
+# ⚙️ Scaling Strategies
+
+### Horizontal Scaling
+
+* Add more servers
+
+### Vertical Scaling
+
+* Increase machine power
+
+### Database Scaling
+
+* Read replicas
+* Sharding
+
+### Caching Strategy
+
+* Reduce DB load
+
+### Async Processing
+
+* Use queues
+
+---
+
+# 🔥 Deep Dive Topics
+
+* Consistent Hashing
+* Distributed Locks
+* Leader Election
+* Monitoring & Logging
+* Circuit Breaker Pattern
+* Idempotency
+
+---
+
+# 📊 Back-of-the-Envelope Cheat Sheet
+
+* 1 million requests/day ≈ ~12 req/sec
+* 1 billion requests/day ≈ ~11,500 req/sec
+* Always estimate:
+
+  * QPS
+  * Storage
+  * Bandwidth
+
+---
+
+# 🧪 Practice Strategy
+
+## Step-by-Step
+
+1. Pick a problem
+2. Set a timer (45–60 mins)
+3. Speak out loud (simulate interview)
+4. Draw architecture
+5. Review and improve
+
+## Focus Areas
+
+* Clarity of thought
+* Communication
+* Trade-offs
+* Real-world feasibility
+
+---
+
+# 🛠️ Tools for Practice
+
+* Excalidraw / diagrams.net (draw architecture)
+* Notion / Markdown (notes)
+
+---
+
+# 📅 Suggested Study Plan
+
+### Week 1–2
+
+* Learn fundamentals
+* Study building blocks
+
+### Week 3–4
+
+* Practice simple systems
+
+### Week 5+
+
+* Practice complex systems
+* Focus on trade-offs
+
+---
+
+# 🧩 Key Principles to Remember
+
+* Design for failure
+* Avoid single points of failure
+* Prefer simplicity
+* Optimize bottlenecks
+* Measure everything
+
+---
+
+# 🚀 Final Advice
+
+System design is not about memorization.
+
+It is about:
+
+* Thinking clearly
+* Communicating effectively
+* Making good trade-offs
+
+---
+
+# ✍️ Personal Notes Section
+
+(Add your own learnings here)
+
+*
+*
+*
+
+---
+
+# ⭐ References
+
+* System Design Interview – Alex Xu
+
+---
+
+**Keep building. Keep iterating.** 🚀
